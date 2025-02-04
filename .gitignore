@@ -1,0 +1,7 @@
+node_modules
+auto-imports.d.ts
+components.d.ts
+main.spec
+dist/
+build/
+public/web/**/*
