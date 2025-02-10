@@ -8,7 +8,7 @@ import hashlib
 def create_directory_if_not_exists(directory):
     if not os.path.exists(directory):
         os.makedirs(directory)
-    return directory
+    return os.path.abspath(directory)
 
 def get_file_md5(file_path):
     hash_md5 = hashlib.md5()
@@ -44,6 +44,7 @@ def version():
 @app.route("/api/versions/download/<version>")
 def download(version):
     if not os.path.exists(versionPath):
+        print('VERSION_NOT_FOUND')
         return 'VERSION_NOT_FOUND', 404
     return send_from_directory(versionPath, version)
 
