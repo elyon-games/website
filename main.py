@@ -68,4 +68,8 @@ if __name__ == '__main__':
     parser.add_argument('--port', type=int, default=5400, help='Port to run the server on')
     args = parser.parse_args()
 
-    app.run(debug=not is_build, port=args.port)
+    if is_build:
+        from waitress import serve
+        serve(app, host='0.0.0.0', port=args.port)
+    else:
+        app.run(debug=True, port=args.port)
