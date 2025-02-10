@@ -71,5 +71,7 @@ if __name__ == '__main__':
     if is_build:
         from waitress import serve
         serve(app, host='0.0.0.0', port=args.port)
+        print('Running in production mode')
+        print(f'Listening on http://0.0.0.0:{args.port}')
     else:
         app.run(debug=True, port=args.port)
