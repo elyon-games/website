@@ -48,7 +48,10 @@ def download(version):
     return send_from_directory(versionPath, version)
 
 def generatedIndex():
-    return render_template('index.html', api_url=request.host_url)
+    api_url = request.host_url
+    if is_build:
+        api_url = api_url.replace('http://', 'https://')
+    return render_template('index.html', api_url=api_url)
 
 @app.route('/')
 def index():
