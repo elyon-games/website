@@ -18,6 +18,6 @@ fi
 
 pyinstaller_path="$HOME/.local/bin/pyinstaller"
 
-npm run build && "$pyinstaller_path" --add-data "$public_path:public" --onefile "$src_path"
+npm run build && pyinstaller --add-data "$public_path:public" --onefile "$src_path"
 
 echo "PyInstaller build completed."
