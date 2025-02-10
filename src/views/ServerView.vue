@@ -1,3 +1,3 @@
 <template>
-    test page
+    Server
 </template>

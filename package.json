@@ -11,13 +11,26 @@
   },
   "dependencies": {
     "@nuxt/ui": "^3.0.0-alpha.12",
+    "@tsparticles/configs": "^3.8.1",
+    "@tsparticles/vue3": "^3.0.1",
+    "aos": "^2.3.4",
+    "dayjs": "^1.11.13",
+    "ofetch": "^1.4.1",
     "pinia": "^2.3.1",
+    "pinia-plugin-persistedstate": "^4.2.0",
+    "pinia-plugin-watch": "^1.0.1",
+    "tsparticles": "^3.8.1",
+    "ufo": "^1.5.4",
     "unhead": "^1.11.18",
     "vue": "^3.5.13",
-    "vue-router": "^4.5.0"
+    "vue-chartjs": "^5.3.2",
+    "vue-material-design-icons": "^5.3.1",
+    "vue-router": "^4.5.0",
+    "vue3-smooth-scroll": "^0.8.1"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.2.1",
+    "unplugin-vue-components": "^28.0.0",
     "vite": "^6.0.11",
     "vite-plugin-vue-devtools": "^7.7.0"
   }

@@ -1,0 +1,3 @@
+<template>
+    notre équipe
+</template>
