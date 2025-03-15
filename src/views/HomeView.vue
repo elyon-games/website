@@ -64,10 +64,19 @@
           <h2 class="text-4xl font-semibold text-emerald-400">
             Présentation
           </h2>
-          <p class="text-gray-400">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ad consequuntur doloribus nisi animi minus perspiciatis neque voluptates, dolores maiores vero, autem rerum atque modi obcaecati repellendus itaque, adipisci id non.</p>
-          <!-- <ul class="space-y-4 sm:space-y-2">
-            <LandingListItem title="No annual fee" />
-          </ul> -->
+          <p class="text-gray-400">
+            Notre jeu est un jeu de combat de tanks en 2D, développé dans le cadre du Trophée NSI. Il oppose deux joueurs dans une arène où ils doivent s'affronter à l'aide de tanks armés de canons. L'objectif est simple : éliminer l'adversaire tout en évitant ses tirs.
+          </p>
+          
+          <h3 class="text-2xl font-semibold text-emerald-400">Technologies</h3>
+          <p class="text-gray-400">
+            Pour ce projet, nous avons principalement utilisé <strong>Python</strong> et <strong>Pygame</strong> pour la base du jeu. Nous avons également intégré <strong>Flask</strong> afin de créer un serveur permettant aux joueurs de s'affronter en ligne.
+          </p>
+          
+          <h3 class="text-2xl font-semibold text-emerald-400">Gameplay</h3>
+          <p class="text-gray-400">
+            Ce jeu propose des affrontements <strong>1 contre 1 en ligne</strong>. Les joueurs peuvent se connecter au <strong>serveur officiel</strong> ou à des <strong>serveurs personnels</strong>. Ils peuvent affronter des adversaires aléatoires ou créer des parties privées avec leurs amis. L'objectif est de cumuler un maximum de points pour atteindre la première place du classement sur son serveur.
+          </p>
         </div>
       </BaseSection>
     </section>
@@ -79,9 +88,12 @@
           <div data-aos="fade-right" class="col-span-12 lg:col-span-6 space-y-8 sm:space-y-6 px-4 sm:px-6 mt-8">
             <h2 class="text-4xl font-semibold text-emerald-400">L'Histoire du projet</h2>
             <div class="space-y-2">
-              <h4 class="text-lg font-medium text-gray-200">Lorem ipsum, dolor sit amet consectetur</h4>
               <p class="text-sm xl:text-base text-gray-300">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tenetur unde pariatur repellat autem itaque possimus impedit nulla? Suscipit cumque quia, amet a atque nostrum, repellat quo voluptatem nisi quod eaque.
+                Tout est parti de notre passion pour la programmation et les jeux vidéo. Quand le professeur nous a parlé du Trophée NSI, nous avons voulu créer un jeu simple, stratégique et compétitif.
+
+                L’idée d’un combat de tanks en 2D est née de notre envie d’un gameplay rapide à prendre en main, mais avec du challenge. D’abord en local, puis en ligne grâce à Flask, nous avons relevé le défi de gérer la physique, les collisions et la connexion des joueurs.
+
+                Après des semaines de travail, nous sommes fiers de présenter un jeu fluide et dynamique, fruit de notre apprentissage et de notre persévérance. Bienvenu sur elyon tanks !
               </p>
             </div>
           </div>
