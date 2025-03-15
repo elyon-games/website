@@ -154,6 +154,11 @@ def ask():
     answer = ask_gemini(question, hystory)
     return jsonify({"answer": answer})
 
+@app.route("/api/docs/files")
+def get_docs_files():
+    temp = [{"name": os.path.basename(f["path"]), "content": f["content"]} for f in filesMD]
+    return jsonify(temp)
+
 @app.route("/api/versions")
 def version():
     return jsonify(get_versions())

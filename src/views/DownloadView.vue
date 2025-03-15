@@ -36,8 +36,9 @@
 <script setup>
 import { useStorage } from '@/stores/storage';
 import { ofetch } from 'ofetch';
+import { joinURL } from 'ufo';
 import { useHead } from 'unhead';
-import { ref } from 'vue';
+import { onMounted, onUnmounted, ref } from 'vue';
 const storage = useStorage();
 useHead({
     title: "Télécharger"
@@ -45,19 +46,27 @@ useHead({
 const versions = ref([]);
 const latestVersion = ref(null);
 
-ofetch("/api/versions", {
-    baseURL: storage.baseURL
-}).then((res) => {
-    versions.value = res.sort(compareVersions).reverse();
-    latestVersion.value = versions.value[0];
-}).catch((err) => {
-    console.error(err);
-    useToast().add({
-        title: "Erreur",
-        message: "Impossible de récupérer les versions",
-        color: "red"
-    })
-});
+
+onMounted(() => {
+    ofetch(joinURL(storage.baseURL, "/api/versions"), {
+        baseURL: storage.baseURL
+    }).then((res) => {
+        versions.value = res.sort(compareVersions).reverse();
+        latestVersion.value = versions.value[0];
+    }).catch((err) => {
+        console.error(err);
+        useToast().add({
+            title: "Erreur",
+            message: "Impossible de récupérer les versions",
+            color: "red"
+        })
+    });
+})
+
+onUnmounted(() => {
+    versions.value = [];
+    latestVersion.value = null;
+})
 
 function compareVersions(v1, v2) {
     const v1Parts = v1.name.split('.').map(Number);
