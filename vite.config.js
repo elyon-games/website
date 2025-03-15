@@ -9,7 +9,9 @@ export default defineConfig({
   plugins: [
     vue(),
     vueDevTools(),
-    ui()
+    ui({
+      colorMode: false
+    })
   ],
   css: ['aos/dist/aos.css'],
   build: {
